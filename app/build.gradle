@@ -9,15 +9,53 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled   true
+            shrinkResources true
+            debuggable false
+
+            versionNameSuffix "-r"
+
+            resValue("string","app_name","Hasbihal")
+        }
+        debug{
+            minifyEnabled   false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+
+            versionNameSuffix "-d"
+
+            resValue("string","app_name","Hasbihal Debug")
         }
     }
+
+    flavorDimensions "Mode"
+    productFlavors {
+        dev {
+            minSdkVersion 24
+            resConfigs("en", "xxhdpi")
+
+            dimension "Mode"
+        }
+
+        prod {
+            dimension "Mode"
+        }
+    }
+}
+
+
+if(project.hasProperty("devBuild")){
+    splits.abi.enable = false
+    splits.density.enable = false
+    aaptOptions.cruncherEnabled = false
 }
 
 ext{
@@ -32,8 +70,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.1.0-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta01'
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
