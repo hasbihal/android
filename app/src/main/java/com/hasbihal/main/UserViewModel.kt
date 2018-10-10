@@ -1,11 +1,10 @@
 package com.hasbihal.main
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-class MainViewModel(context: Application): AndroidViewModel(context){
-    private val list = MutableLiveData<String>()
+class MainViewModel: ViewModel() {
+    private val list = MutableLiveData<MainModel>()
 
 
     fun getList() : MutableLiveData<String> {
