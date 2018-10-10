@@ -3,15 +3,13 @@ package com.hasbihal.main
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainViewModel: ViewModel() {
-    private val list = MutableLiveData<MainModel>()
+class UserViewModel: ViewModel() {
+    private val list = MutableLiveData<User>()
 
 
-    fun getList() : MutableLiveData<String> {
-        list.value = "test1"
-        list.value = "test2"
-        list.value = "test3"
-
+    fun loadUsers() : MutableLiveData<User> {
         return list
     }
+
+
 }
