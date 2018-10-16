@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.hasbihal.data.entity.UserEntity
 import com.hasbihal.extension.load
-import kotlinx.android.synthetic.main.main_item.view.*
+import kotlinx.android.synthetic.main.item_user_list.view.*
 
-class MainAdapter(private val context: Context,
-                  private val data: List<User>,
-                  private val layoutID: Int) : RecyclerView.Adapter<MainViewHolder>() {
+class UserListAdapter(private val context: Context,
+                      private val data: List<UserEntity>,
+                      private val layoutID: Int) : RecyclerView.Adapter<MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(LayoutInflater.from(context).inflate(layoutID, parent, false))

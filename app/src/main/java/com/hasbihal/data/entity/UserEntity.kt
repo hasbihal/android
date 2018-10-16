@@ -1,8 +1,6 @@
-package com.hasbihal.main
+package com.hasbihal.data.entity
 
-
-// Maybe it's name can be different, i will be think
-data class User(
+data class UserEntity(
         val userId: Int,
         val name: String,
         val descripton: String,
