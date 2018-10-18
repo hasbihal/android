@@ -36,17 +36,17 @@ android {
         }
     }
 
-    flavorDimensions "Mode"
+    flavorDimensions "default"
     productFlavors {
         dev {
             minSdkVersion 24
             resConfigs("en", "xxhdpi")
 
-            dimension "Mode"
+            dimension "default"
         }
 
         prod {
-            dimension "Mode"
+            dimension "default"
         }
     }
 }
