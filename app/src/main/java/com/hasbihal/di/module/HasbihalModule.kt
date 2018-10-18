@@ -1,4 +1,4 @@
-package com.hasbihal.di
+package com.hasbihal.di.module
 
 import com.hasbihal.data.repository.IRepository
 import com.hasbihal.data.repository.UserRepository
