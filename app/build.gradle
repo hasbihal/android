@@ -63,6 +63,7 @@ ext{
     gson            = "2.8.5"
     koin            = "1.0.1"
     glide           = "4.8.0"
+    okhttp_log      = "3.11.0"
 }
 
 dependencies {
@@ -77,6 +78,7 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_log"
 
     // Gson
     implementation "com.google.code.gson:gson:$gson"
