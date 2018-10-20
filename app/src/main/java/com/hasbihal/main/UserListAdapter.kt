@@ -10,7 +10,7 @@ import com.hasbihal.extension.load
 import kotlinx.android.synthetic.main.item_user_list.view.*
 
 class UserListAdapter(private val context: Context,
-                      private val data: List<UserEntity>,
+                      private val data: MutableList<UserEntity>,
                       private val layoutID: Int) : RecyclerView.Adapter<MainViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {

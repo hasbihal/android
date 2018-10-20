@@ -1,22 +1,22 @@
 package com.hasbihal.main
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.hasbihal.R
+import com.hasbihal.data.entity.UserEntity
+import kotlinx.android.synthetic.main.activity_user_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserListActivity : AppCompatActivity() {
 
-    val userViewModel: UserViewModel by viewModel()
+    val viewModel: UserViewModel by viewModel()
+    lateinit var adapter  : UserListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_list)
 
-        //val model = ViewModelProviders.of(this).get(UserViewModel::class.java)
-
-        Log.d("UserListActivity", "test is :"+userViewModel.testRepo())
-
+        adapter = UserListAdapter(applicationContext, mutableListOf(), R.layout.item_user_list)
+        lstMainOfUser.adapter = adapter
     }
 }
