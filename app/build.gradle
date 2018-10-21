@@ -64,6 +64,7 @@ ext{
     koin            = "1.0.1"
     glide           = "4.8.0"
     okhttp_log      = "3.11.0"
+    room            = "2.1.0-alpha01"
 }
 
 dependencies {
@@ -71,7 +72,10 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+
+    //Test
     testImplementation 'junit:junit:4.12'
+    testImplementation "androidx.room:room-testing:$room"
     androidTestImplementation 'androidx.test:runner:1.1.0-beta02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta02'
 
@@ -95,4 +99,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide"
 
+    //Room
+    implementation "androidx.room:room-runtime:$room"
+    annotationProcessor "androidx.room:room-compiler:$room"
 }
