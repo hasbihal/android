@@ -1,6 +1,6 @@
 package com.hasbihal.network
 
-import com.hasbihal.data.entity.UserEntity
+import com.hasbihal.data.model.UserEntity
 import retrofit2.Call
 import retrofit2.http.POST
 

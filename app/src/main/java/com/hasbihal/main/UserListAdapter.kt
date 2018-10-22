@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hasbihal.data.entity.UserEntity
+import com.hasbihal.data.model.UserEntity
 import com.hasbihal.extension.load
 import kotlinx.android.synthetic.main.item_user_list.view.*
 

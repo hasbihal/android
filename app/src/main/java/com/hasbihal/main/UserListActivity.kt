@@ -3,7 +3,6 @@ package com.hasbihal.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.hasbihal.R
-import com.hasbihal.data.entity.UserEntity
 import kotlinx.android.synthetic.main.activity_user_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

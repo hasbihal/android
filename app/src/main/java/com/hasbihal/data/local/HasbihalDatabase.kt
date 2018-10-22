@@ -1,4 +1,4 @@
-package com.hasbihal.data.local.DB
+package com.hasbihal.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

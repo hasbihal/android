@@ -1,4 +1,5 @@
-package com.hasbihal.data.entity
+package com.hasbihal.data.model
+
 
 data class UserEntity(
         val userId: Int,
