@@ -65,6 +65,7 @@ ext{
     glide           = "4.8.0"
     okhttp_log      = "3.11.0"
     room            = "2.1.0-alpha01"
+    timber          = "4.7.1"
 }
 
 dependencies {
@@ -102,4 +103,7 @@ dependencies {
     //Room
     implementation "androidx.room:room-runtime:$room"
     annotationProcessor "androidx.room:room-compiler:$room"
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$timber"
 }
