@@ -29,3 +29,4 @@ modules.xml
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
+hasbihal.properties

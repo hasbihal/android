@@ -18,7 +18,7 @@ android {
     signingConfigs {
         config {
             def props = new Properties()
-            props.load(new FileInputStream(rootProject.file("release.properties")))
+            props.load(new FileInputStream(rootProject.file("hasbihal.properties")))
 
             storeFile rootProject.file(props.keyStore)
             keyAlias props.keyAlias
@@ -29,6 +29,8 @@ android {
 
     buildTypes {
         release {
+            signingConfig signingConfigs.config
+
             minifyEnabled   true
             shrinkResources true
             debuggable false
