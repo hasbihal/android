@@ -17,10 +17,11 @@
 -dontwarn javax.annotation.**
 -dontwarn kotlin.Unit
 -dontwarn retrofit2.-KotlinExtensions
+-dontwarn okhttp3.internal.platform.*
 
 # AndroidX
--keepclassmembers class androidx.lifecycle.** { ; }
--keep class androidx.lifecycle.* { ; }
+-keepclassmembers class androidx.lifecycle.** { *; }
+-keep class androidx.lifecycle.* { *; }
 -dontwarn androidx.lifecycle.*
 
 
@@ -31,5 +32,4 @@
   **[] $VALUES;
   public *;
 }
-# for DexGuard only
--keepresourcexmlelements manifest/application/meta-data@value=GlideModule
+
