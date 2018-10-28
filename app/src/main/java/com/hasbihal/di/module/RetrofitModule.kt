@@ -1,6 +1,5 @@
 package com.hasbihal.di.module
 
-import com.hasbihal.data.repository.IRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module.module

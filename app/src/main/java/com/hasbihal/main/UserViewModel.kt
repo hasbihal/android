@@ -1,20 +1,16 @@
 package com.hasbihal.main
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.hasbihal.data.model.UserEntity
-import com.hasbihal.data.repository.IRepository
+import com.hasbihal.data.repository.UserRepository
 
-class UserViewModel(private val repo: IRepository): ViewModel() {
-    private val list = MutableLiveData<UserEntity>()
+class UserViewModel(private val repo: UserRepository): ViewModel() {
+    private var list = MutableLiveData<List<UserEntity>>()
 
-
-    fun loadUsers() : MutableLiveData<UserEntity> {
+    fun loadUsers() : LiveData<List<UserEntity>> {
+        list = repo.getData()
         return list
     }
-
-    fun testRepo(): String {
-        return repo.getData()
-    }
-
 }

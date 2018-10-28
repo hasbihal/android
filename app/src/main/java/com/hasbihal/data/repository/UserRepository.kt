@@ -1,8 +1,12 @@
 package com.hasbihal.data.repository
 
-class UserRepository: IRepository {
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.hasbihal.data.model.UserEntity
 
-    override fun getData(): String {
-        return "Test"
+class UserRepository{
+
+    fun getData(): MutableLiveData<List<UserEntity>> {
+        return MutableLiveData<List<UserEntity>>()
     }
 }
