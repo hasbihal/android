@@ -11,7 +11,7 @@ val RetrofitModule = module {
 
     single { createOkHttpClient() }
 
-    single { createWebService<IRepository>(get(), getProperty(BASE_URL)) }
+    //single { createWebService<IRepository>(get(), getProperty(BASE_URL)) }
 }
 
 const val BASE_URL = "BASE URL"
