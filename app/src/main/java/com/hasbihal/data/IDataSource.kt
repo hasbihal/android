@@ -1,6 +1,7 @@
-package com.hasbihal.data.remote
+package com.hasbihal.data
 
-class RemoteDataSource {
+interface IDataSource {
 
-    // TODO: Implement
+    fun <T> getData(): T
+
 }

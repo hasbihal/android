@@ -1,4 +1,12 @@
 package com.hasbihal.data.remote
 
-class RemoteDataSource {
+import com.hasbihal.data.IDataSource
+
+class RemoteDataSource: IDataSource{
+
+    override fun <T> getData(): T {
+        TODO("not implegmented")
+    }
+
+
 }

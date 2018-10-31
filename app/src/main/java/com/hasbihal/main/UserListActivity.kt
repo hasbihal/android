@@ -9,7 +9,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UserListActivity : AppCompatActivity() {
 
-    val viewModel: UserViewModel by viewModel()
+    private val viewModel: UserViewModel by viewModel()
     lateinit var adapter  : UserListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,5 @@ class UserListActivity : AppCompatActivity() {
             adapter = UserListAdapter(applicationContext, it, R.layout.item_user_list)
             lstMainOfUser.adapter = adapter
         })
-
-
     }
 }
