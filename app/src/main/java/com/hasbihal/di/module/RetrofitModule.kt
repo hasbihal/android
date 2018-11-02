@@ -1,5 +1,6 @@
 package com.hasbihal.di.module
 
+import com.hasbihal.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module.module
@@ -11,12 +12,10 @@ val RetrofitModule = module {
 
     single { createOkHttpClient() }
 
-    //single { createWebService<IRepository>(get(), getProperty(BASE_URL)) }
+    single { createWebService( get() ) }
 }
 
-const val BASE_URL = "BASE URL"
-
-fun createOkHttpClient(): OkHttpClient {
+private fun createOkHttpClient(): OkHttpClient {
     val httpLoggingInterceptor = HttpLoggingInterceptor()
     httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
     return OkHttpClient.Builder()
@@ -26,12 +25,10 @@ fun createOkHttpClient(): OkHttpClient {
             .build()
 }
 
-inline fun <reified T> createWebService(okHttpClient: OkHttpClient, url: String): T {
-    val retrofit = Retrofit.Builder()
-            .baseUrl(url)
+fun createWebService(okHttpClient: OkHttpClient): Retrofit {
+    return Retrofit.Builder()
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
-    return retrofit.create(T::class.java)
 }
