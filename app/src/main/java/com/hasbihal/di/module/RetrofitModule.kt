@@ -1,18 +1,26 @@
 package com.hasbihal.di.module
 
 import com.hasbihal.BASE_URL
+import com.hasbihal.network.UserApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-val RetrofitModule = module {
+val RetrofitModule: Module = module {
 
     single { createOkHttpClient() }
 
     single { createWebService( get() ) }
+
+    factory { provideUserApi( get() ) }
+}
+
+fun provideUserApi(retrofit: Retrofit): UserApi {
+    return retrofit.create(UserApi::class.java)
 }
 
 private fun createOkHttpClient(): OkHttpClient {
@@ -32,3 +40,5 @@ fun createWebService(okHttpClient: OkHttpClient): Retrofit {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 }
+
+
