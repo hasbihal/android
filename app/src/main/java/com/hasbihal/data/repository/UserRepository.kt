@@ -1,12 +1,12 @@
 package com.hasbihal.data.repository
 
-import androidx.lifecycle.MutableLiveData
 import com.hasbihal.data.model.User
-import com.hasbihal.data.IDataSource
+import com.hasbihal.network.UserApi
+import retrofit2.Call
 
-class UserRepository(val dataSource: IDataSource){
+class UserRepository(private val userApi: UserApi){
 
-    fun getData(): MutableLiveData<List<User>> {
-        return dataSource.getData()
+    fun getData(): Call<List<User>> {
+        return userApi.getUsers()
     }
 }
