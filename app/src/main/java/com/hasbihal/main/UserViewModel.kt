@@ -11,7 +11,8 @@ class UserViewModel(private val repo: UserRepository): ViewModel() {
     private var list = MutableLiveData<List<User>>()
 
     fun loadUsers() : LiveData<List<User>> {
-        list = repo.getData()
+        val response = repo.getData().execute()
+        list.value = response.body()
         return list
     }
 }
