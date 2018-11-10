@@ -10,8 +10,8 @@ import java.util.*
 data class Message constructor(
         @PrimaryKey @ColumnInfo(name = "id") var id: String = UUID.randomUUID().toString(),
         @ColumnInfo(name = "message") var message: String,
-        @ColumnInfo(name = "to")      var to: Int,
-        @ColumnInfo(name = "from")    var from: Int,
+        @ColumnInfo(name = "receive") var to: Int,
+        @ColumnInfo(name = "sender")  var from: Int,
         @ColumnInfo(name = "date")    var date: Date,
         @ColumnInfo(name = "isRead")  var isRead: Boolean
     ){
