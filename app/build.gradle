@@ -51,6 +51,10 @@ android {
         }
     }
 
+    sourceSets {
+        apiTesting.java.srcDir("src/deneme/java")
+    }
+
     flavorDimensions "default"
     productFlavors {
         dev {
@@ -63,7 +67,6 @@ android {
         apiTesting {
             minSdkVersion 24
             resConfigs("en", "xxhdpi")
-
             dimension "default"
         }
 
