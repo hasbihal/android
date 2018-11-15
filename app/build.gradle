@@ -52,7 +52,13 @@ android {
     }
 
     sourceSets {
-        apiTesting.java.srcDir("src/deneme/java")
+
+
+        apiTesting {
+            java {
+                srcDirs = ['src/apitesting/java']
+            }
+        }
     }
 
     flavorDimensions "default"
