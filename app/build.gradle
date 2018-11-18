@@ -51,16 +51,6 @@ android {
         }
     }
 
-    sourceSets {
-
-
-        apiTesting {
-            java {
-                srcDirs = ['src/apitesting/java']
-            }
-        }
-    }
-
     flavorDimensions "default"
     productFlavors {
         dev {
