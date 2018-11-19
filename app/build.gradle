@@ -73,7 +73,9 @@ android {
     }
 
     sourceSets {
-        main { java.srcDirs = ['src/main/java', 'src/apiTesting/java']  }
+        dev { java.srcDirs = ['src/main/java', 'src/dev/java']  }
+        apiTesting { java.srcDirs = ['src/main/java', 'src/apiTesting/java']}
+        main { java.srcDirs = ['src/main/java']  }
     }
 }
 
