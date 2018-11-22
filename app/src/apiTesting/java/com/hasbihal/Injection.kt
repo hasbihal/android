@@ -18,7 +18,7 @@ val viewModelModule: Module = module {
 }
 
 val repositoryModule: Module = module {
-    single { UserRepository(get()) }
+    single { FakeUserRepository(get()) }
 }
 
 val networkModule: Module = module {
