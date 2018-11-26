@@ -1,3 +1,4 @@
 <resources>
 
+    <string name="unexpected_error">Unexpected Error. Please try again!</string>
 </resources>
