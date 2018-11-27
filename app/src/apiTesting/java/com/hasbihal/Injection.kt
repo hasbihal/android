@@ -6,6 +6,7 @@ import com.hasbihal.network.MessageApi
 import com.hasbihal.network.UserApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
@@ -18,7 +19,7 @@ val viewModelModule: Module = module {
 }
 
 val repositoryModule: Module = module {
-    single { FakeUserRepository(get()) }
+    single { FakeUserRepository(androidApplication()) }
 }
 
 val networkModule: Module = module {
