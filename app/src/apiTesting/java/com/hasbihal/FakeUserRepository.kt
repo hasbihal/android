@@ -1,15 +1,32 @@
 package com.hasbihal
 
-import com.hasbihal.data.model.User
-import com.hasbihal.network.UserApi
-import okio.Okio
-import retrofit2.Call
-import java.io.IOException
+import android.content.Context
+import com.hasbihal.data.repository.Repository
+import com.hasbihal.data.response.Response
 
-class FakeUserRepository(private val userApi: UserApi){
+class FakeUserRepository(val context: Context) : Repository{
+
+/*
+*
+*
+* {
+      "avatar": null,
+      "email": "asfas@gmail.com",
+      "gender": "both",
+      "id": 23,
+      "location": "istanbul",
+      "name": "asfas",
+      "summary": "developer"
+    }
+*
+*
+*
+* */
 
 
-    fun getData(): Call<List<User>> {
-        return userApi.getUsers()
+    override fun getData(): Response {
+        val usersJsonObject = loadJsonFile(context, "users.json")
+
+        return Response
     }
 }

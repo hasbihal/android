@@ -1,12 +1,34 @@
 package com.hasbihal.data.repository
 
-import com.hasbihal.data.model.User
+
+import com.hasbihal.Hasbihal
+import com.hasbihal.R
+import com.hasbihal.data.response.Response
 import com.hasbihal.network.UserApi
-import retrofit2.Call
 
-class UserRepository(private val userApi: UserApi){
+class UserRepository(private val userApi: UserApi) : Repository {
 
-    fun getData(): Call<List<User>> {
-        return userApi.getUsers()
+    override fun getData(): Response {
+        val serviceResponse = userApi.getUsers().execute()
+
+
+        // TODO : refactor for errors
+        if(serviceResponse.isSuccessful)
+        {
+            return Response(
+                    code = serviceResponse.code(),
+                    message = serviceResponse.message(),
+                    isSuccessful = serviceResponse.isSuccessful,
+                    body = serviceResponse.body()!!
+                    )
+        }
+
+        return Response(
+                code = -1,
+                message = Hasbihal.app.applicationContext.getString(R.string.unexpected_error),
+                isSuccessful = serviceResponse.isSuccessful,
+                body = serviceResponse.body()!!
+        )
     }
+
 }
