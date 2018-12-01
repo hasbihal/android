@@ -6,3 +6,8 @@ data class Response(
     val isSuccessful: Boolean,
     val body: Any
 )
+
+enum class ResponseType{
+    SUCCESS, FAIL
+}
+
