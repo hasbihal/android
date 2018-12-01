@@ -1,9 +1,12 @@
 package com.hasbihal.data.model
 
-
 data class User(
-        val userId: Int,
+        val id: Int,
         val name: String,
-        val descripton: String,
-        val photoUrl: String
+        val summary: String,
+        val photoUrl: String,
+        val avatar: String,
+        val location: String,
+        val email: String,
+        val gender: String
 )
