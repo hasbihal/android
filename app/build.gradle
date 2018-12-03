@@ -15,6 +15,7 @@ android {
         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
 
+
     signingConfigs {
         config {
             def props = new Properties()
@@ -40,7 +41,7 @@ android {
             resValue("string", "app_name", "Hasbihal")
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
             debuggable true
@@ -70,12 +71,6 @@ android {
         prod {
             dimension "default"
         }
-    }
-
-    sourceSets {
-        dev { java.srcDirs = ['src/main/java', 'src/dev/java']  }
-        apiTesting { java.srcDirs = ['src/main/java', 'src/apiTesting/java']}
-        main { java.srcDirs = ['src/main/java']  }
     }
 }
 
