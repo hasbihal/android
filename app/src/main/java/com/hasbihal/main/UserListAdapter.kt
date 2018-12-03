@@ -22,7 +22,7 @@ class UserListAdapter(private val context: Context,
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.txtDescription.text = data[position].descripton
+        holder.txtDescription.text = data[position].summary
         holder.imgProfile.load(data[position].photoUrl)
     }
 

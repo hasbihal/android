@@ -7,7 +7,3 @@ data class Response(
     val body: Any
 )
 
-enum class ResponseType{
-    SUCCESS, FAIL
-}
-

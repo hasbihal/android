@@ -1,8 +1,6 @@
 package com.hasbihal
 
 import android.app.Application
-import android.content.Context
-import org.koin.android.ext.android.get
 import org.koin.android.ext.android.startKoin
 import timber.log.Timber
 
