@@ -1,5 +1,6 @@
 package com.hasbihal
 
+import com.hasbihal.data.repository.Repository
 import com.hasbihal.data.repository.UserRepository
 import com.hasbihal.main.UserViewModel
 import com.hasbihal.network.MessageApi
@@ -19,7 +20,7 @@ val viewModelModule: Module = module {
 }
 
 val repositoryModule: Module = module {
-    single { FakeUserRepository(androidApplication()) }
+    single<Repository>{ FakeUserRepository(androidApplication()) }
 }
 
 val networkModule: Module = module {
