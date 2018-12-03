@@ -22,13 +22,6 @@ class UserRepository(private val userApi: UserApi) : Repository {
                     body = serviceResponse.body()!!
                     )
         }
-
-        return Response(
-                code = -1,
-                message = Hasbihal.app.applicationContext.getString(R.string.unexpected_error),
-                isSuccessful = serviceResponse.isSuccessful,
-                body = serviceResponse.body()!!
-        )
     }
 
 }
