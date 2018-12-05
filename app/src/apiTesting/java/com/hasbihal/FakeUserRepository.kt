@@ -9,7 +9,7 @@ class FakeUserRepository(val context: Context) : Repository{
     private val RESPONSE_CODE = 0
 
     override fun getData(): Response {
-        val usersJsonObject = loadJsonFile(context, "users.json")
+        val usersJsonObject = loadJsonFile(context)
 
         return Response(
                 code = RESPONSE_CODE,

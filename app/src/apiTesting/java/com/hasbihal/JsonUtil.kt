@@ -7,8 +7,8 @@ import java.io.IOException
 
 
 @Throws(IOException::class, JSONException::class)
-fun loadJsonFile(context: Context, fileName: String): JSONObject {
-    val `is` = context.getAssets().open(fileName)
+fun loadJsonFile(context: Context): JSONObject {
+    val `is` = context.resources.openRawResource(R.raw.users)
     val size = `is`.available()
     val buffer = ByteArray(size)
     `is`.read(buffer)
