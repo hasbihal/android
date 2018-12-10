@@ -1,35 +1,40 @@
 package com.hasbihal.main
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.hasbihal.R
 import com.hasbihal.data.model.User
-import com.hasbihal.extension.load
 import kotlinx.android.synthetic.main.item_user_list.view.*
 
-class UserListAdapter(private val context: Context,
-                      private val data: List<User>,
-                      private val layoutID: Int) : RecyclerView.Adapter<MainViewHolder>() {
+class UserListAdapter : RecyclerView.Adapter<UserListAdapter.MainViewHolder>() {
+
+    private val list: MutableList<User> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        return MainViewHolder(LayoutInflater.from(context).inflate(layoutID, parent, false))
+        return MainViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_user_list, parent, false))
     }
 
     override fun getItemCount(): Int {
-       return data.size
+       return list.size
+    }
+
+    fun updateUsers(products: List<User>) {
+        this.list.clear()
+        this.list.addAll(products)
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.txtDescription.text = data[position].summary
-        holder.imgProfile.load(data[position].photoUrl)
+        holder.bind(list[position])
     }
 
 
+    class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(user: User){
+            itemView.txtUserName.text    = user.name
+            itemView.txtDescription.text = user.summary
+        }
+    }
 }
 
-class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val imgProfile = view.imgProfile
-    val txtDescription = view.txtDescription
-}
