@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.hasbihal.R
 import com.hasbihal.data.model.User
 import kotlinx.android.synthetic.main.item_user_list.view.*
@@ -34,6 +36,16 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.MainViewHolder>() {
         fun bind(user: User){
             itemView.txtUserName.text    = user.name
             itemView.txtDescription.text = user.summary
+
+            val options = RequestOptions()
+                    .placeholder(R.drawable.ic_profile_24dp)
+                    .error(R.drawable.ic_profile_24dp)
+
+            Glide.with(itemView)
+                    .load(user.photoUrl)
+                    .apply(options)
+                    .into(itemView.imgProfile)
+
         }
     }
 }
