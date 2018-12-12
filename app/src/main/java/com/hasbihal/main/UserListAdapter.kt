@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.Transformation
 import com.bumptech.glide.request.RequestOptions
 import com.hasbihal.R
 import com.hasbihal.data.model.User
@@ -39,10 +40,11 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.MainViewHolder>() {
 
             val options = RequestOptions()
                     .placeholder(R.drawable.ic_profile_24dp)
+                    .circleCrop()
                     .error(R.drawable.ic_profile_24dp)
 
             Glide.with(itemView)
-                    .load(user.photoUrl)
+                    .load("https://avatars3.githubusercontent.com/u/13402649?s=460&v=4")
                     .apply(options)
                     .into(itemView.imgProfile)
 
