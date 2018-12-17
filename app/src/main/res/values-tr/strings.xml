@@ -1,3 +1,5 @@
 <resources>
     <string name="unexpected_error">Beklenmedik bir hata meydana geldi. Lütfen tekrar deneyin!!!</string>
+    <string name="user_name">Kullanıcı Adı :</string>
+    <string name="password">Şifre :</string>
 </resources>
