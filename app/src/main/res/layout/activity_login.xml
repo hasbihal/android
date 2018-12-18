@@ -4,27 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e6e0e0"
     tools:context=".login.LoginActivity">
 
     <EditText
         android:id="@+id/edtUsername"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="24dp"
+        android:paddingLeft="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:background="@drawable/rounded_login_ui"
+        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-        android:layout_width="match_parent" />
+        />
 
     <EditText
         android:id="@+id/edtPassword"
-        android:layout_height="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rounded_login_ui"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
