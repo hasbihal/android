@@ -35,7 +35,7 @@
         android:paddingLeft="10dp"
         android:background="@drawable/rounded_login_ui"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/edtUsername"
         app:layout_constraintStart_toStartOf="@+id/edtUsername"
@@ -61,7 +61,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
