@@ -19,7 +19,7 @@
         android:id="@+id/edtMessage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/edittext_rounded_bg"
+        android:background="@drawable/rounded_edittext"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="6dp"
