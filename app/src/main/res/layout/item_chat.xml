@@ -9,23 +9,28 @@
 
     <TextView
         android:id="@+id/txtMessage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/rounded_chat_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6"
         tools:text = "Engine eğitimlerinin zamanlama ve detaylarını otomatize etmek adına tasarladığımız engine streamlining altyapısı hakkında bir doküman yazacağız"
         android:paddingStart="@dimen/padding_large"
         android:paddingEnd="@dimen/padding_large"
         android:paddingTop="@dimen/margin_small"
-        android:paddingBottom="@dimen/margin_small"/>
+        android:paddingBottom="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_small"/>
 
     <TextView
         android:id="@+id/txtMessageTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/txtMessage"
         app:layout_constraintRight_toRightOf="@id/txtMessage"
         android:paddingBottom="@dimen/margin_small"
         android:paddingEnd="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
         tools:text="18:20"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
