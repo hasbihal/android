@@ -1,4 +1,4 @@
-package com.hasbihal.chat
+package com.hasbihal.ui.chat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,8 +1,7 @@
 package com.hasbihal
 
 import com.hasbihal.data.repository.Repository
-import com.hasbihal.data.repository.UserRepository
-import com.hasbihal.main.UserViewModel
+import com.hasbihal.ui.main.UserViewModel
 import com.hasbihal.network.MessageApi
 import com.hasbihal.network.UserApi
 import okhttp3.OkHttpClient

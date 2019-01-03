@@ -1,11 +1,10 @@
-package com.hasbihal.main
+package com.hasbihal.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.hasbihal.data.model.User
 import com.hasbihal.data.repository.Repository
-import com.hasbihal.data.repository.UserRepository
 
 class UserViewModel(private val repo: Repository): ViewModel() {
 

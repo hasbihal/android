@@ -1,12 +1,9 @@
-package com.hasbihal.main
+package com.hasbihal.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.Transformation
-import com.bumptech.glide.request.RequestOptions
 import com.hasbihal.R
 import com.hasbihal.data.model.User
 import com.hasbihal.extension.loadWithRounded

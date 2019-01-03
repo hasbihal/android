@@ -1,4 +1,4 @@
-package com.hasbihal.chat
+package com.hasbihal.ui.chat
 
 class ChatViewModel {
 }

@@ -1,4 +1,4 @@
-package com.hasbihal.login
+package com.hasbihal.ui.login
 
 import androidx.lifecycle.ViewModel
 
