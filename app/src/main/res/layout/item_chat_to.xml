@@ -15,6 +15,7 @@
         tools:text = "This method is responsible for breaking a sentence apart into tokens. One token at a time."
         android:ellipsize="end"
         android:maxLines="10"
+        android:textColor="@android:color/black"
         android:paddingStart="@dimen/padding_large"
         android:paddingEnd="@dimen/padding_large"
         android:paddingTop="@dimen/margin_small"
