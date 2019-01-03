@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.item_chat_to.view.*
 
 class ChatAdapter : RecyclerView.Adapter<ChatHolder>() {
 
-    private lateinit var list: MutableList<Chat>
+    private var list = mutableListOf<Chat>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
         return ChatHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_chat_to, parent, false))
@@ -25,5 +25,6 @@ class ChatAdapter : RecyclerView.Adapter<ChatHolder>() {
     fun setList(list: List<Chat>){
         this.list.clear()
         this.list.addAll(list)
+        notifyDataSetChanged()
     }
 }
