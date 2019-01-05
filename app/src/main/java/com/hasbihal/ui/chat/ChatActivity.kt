@@ -26,13 +26,13 @@ class ChatActivity : AppCompatActivity() {
         var list = mutableListOf<Chat>()
 
         list.add(Chat(1,"1","deneme 1",false))
-        list.add(Chat(1,"1","deneme 2",false))
+        list.add(Chat(1,"1","deneme 2",true))
         list.add(Chat(1,"1","deneme 3",false))
-        list.add(Chat(1,"1","deneme 4",false))
+        list.add(Chat(1,"1","deneme 4",true))
         list.add(Chat(1,"1","deneme 5",false))
-        list.add(Chat(1,"1","deneme 6",false))
+        list.add(Chat(1,"1","deneme 6",true))
         list.add(Chat(1,"1","deneme 7",false))
-        list.add(Chat(1,"1","deneme 8",false))
+        list.add(Chat(1,"1","deneme 8",true))
 
         return list
     }
