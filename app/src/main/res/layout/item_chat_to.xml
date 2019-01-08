@@ -5,13 +5,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white">
+    android:background="@android:color/transparent">
 
     <TextView
         android:id="@+id/txtMessage"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_chat_item"
+        android:background="@drawable/rounded_chat_item_from_to"
         tools:text = "This method is responsible for breaking a sentence apart into tokens. One token at a time."
         android:ellipsize="end"
         android:maxLines="10"
