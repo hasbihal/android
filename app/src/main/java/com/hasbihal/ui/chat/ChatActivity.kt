@@ -27,5 +27,9 @@ class ChatActivity : AppCompatActivity() {
 
         lstChat.layoutManager = LinearLayoutManager(this)
         lstChat.adapter = adapter
+
+        btnSend.setOnClickListener {
+            viewModel.sendMessage(edtMessage.text.toString())
+        }
     }
 }

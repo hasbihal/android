@@ -6,22 +6,28 @@ import androidx.lifecycle.ViewModel
 
 class ChatViewModel: ViewModel() {
 
-    private val chats = MutableLiveData<List<Chat>>()
+    private var chats = MutableLiveData<ArrayList<Chat>>()
+    private val chatList  = ArrayList<Chat>()
 
-    fun getChats() : LiveData<List<Chat>> {
-        val list = ArrayList<Chat>()
+    init {
+        chatList.add(Chat(1,"1","deneme 1",false))
+        chatList.add(Chat(1,"1","deneme 2",true))
+        chatList.add(Chat(1,"1","deneme 3",false))
+        chatList.add(Chat(1,"1","deneme 4",true))
+        chatList.add(Chat(1,"1","deneme 5",false))
+        chatList.add(Chat(1,"1","deneme 6",true))
+        chatList.add(Chat(1,"1","deneme 7",false))
+        chatList.add(Chat(1,"1","deneme 8",true))
 
-        list.add(Chat(1,"1","deneme 1",false))
-        list.add(Chat(1,"1","deneme 2",true))
-        list.add(Chat(1,"1","deneme 3",false))
-        list.add(Chat(1,"1","deneme 4",true))
-        list.add(Chat(1,"1","deneme 5",false))
-        list.add(Chat(1,"1","deneme 6",true))
-        list.add(Chat(1,"1","deneme 7",false))
-        list.add(Chat(1,"1","deneme 8",true))
+        chats.value = chatList
+    }
 
-        chats.value = list
-
+    fun getChats() : LiveData<ArrayList<Chat>> {
         return chats
+    }
+
+    fun sendMessage(message: String){
+        chatList.add(Chat(1,"1",message,false))
+        chats.postValue(chatList)
     }
 }
