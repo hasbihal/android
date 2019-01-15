@@ -19,7 +19,7 @@ class ChatViewModel: ViewModel() {
         chatList.add(Chat(1,"1","deneme 7",false))
         chatList.add(Chat(1,"1","deneme 8",true))
 
-        chats.value = chatList
+        chats.postValue(chatList)
     }
 
     fun getChats() : LiveData<ArrayList<Chat>> {
