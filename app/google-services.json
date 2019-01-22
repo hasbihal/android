@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "940730318917",
+    "firebase_url": "https://hasbilhal.firebaseio.com",
+    "project_id": "hasbilhal",
+    "storage_bucket": "hasbilhal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940730318917:android:d7636a4f625c8fdd",
+        "android_client_info": {
+          "package_name": "com.hasbihal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940730318917-sgcmjjijboiev4212nq0a2gh2um7d7bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDotNeDJPrjjYDvchDEWqOCARMvaVaQjTM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
