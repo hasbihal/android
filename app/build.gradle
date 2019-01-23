@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 28
@@ -155,3 +155,5 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$timber"
 
 }
+
+apply plugin: 'com.google.gms.google-services'
