@@ -16,17 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.hasbihal.ui.login.LoginActivity">
+        <activity android:name=".ui.register.RegisterActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.hasbihal.ui.main.UserListActivity"/>
-        <activity android:name="com.hasbihal.ui.chat.ChatActivity">
-
-        </activity>
+        <activity android:name=".ui.main.UserListActivity" />
+        <activity android:name=".ui.chat.ChatActivity"></activity>
     </application>
 
 </manifest>
